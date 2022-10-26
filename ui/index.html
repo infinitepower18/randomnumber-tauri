@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Number Generator</title>
+  </head>
+  <style>
+    body {
+      padding-left: 5px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    h1 {
+      margin-bottom: 5px;
+    }
+    #output {
+      margin-bottom: 5px;
+    }
+    *{
+      margin-top:3px;
+    }
+  </style>
+  <body>
+    <h1 style="font-size: 25px">Random Number Generator</h1>
+    <div id="output"></div>
+    <button onclick="generateNumber()">Generate number</button>
+    <script>
+      function generateNumber() {
+        document.getElementById("output").innerHTML =
+          "Your random number is " + Math.floor(Math.random() * 100 + 1);
+      }
+    </script>
+  </body>
+</html>
