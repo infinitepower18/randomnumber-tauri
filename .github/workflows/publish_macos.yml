@@ -20,7 +20,7 @@ jobs:
         with:
           toolchain: stable
       - name: install app dependencies and build it
-        run: npm install && npm run tauri -- build -t universal-apple-darwin
+        run: npm install && rustup target add aarch64-apple-darwin && npm run tauri -- build -t universal-apple-darwin
       - uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
